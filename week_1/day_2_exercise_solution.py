@@ -3,7 +3,7 @@
 Created on Jun 08 10:11 2018
 @author(s): Florian U. Jehn
 """
-# Exercise 1 (Conditionals)
+# Exercise 1 
 word = input("Word please!")
 if len(word) > 4:
     print(word)
@@ -67,6 +67,29 @@ elif month == "dec":
     print(31)
 else:
     print("you gave me no month")
+    
+# Exercise 7
+vacation_price = float(input("How expensive should the holiday be? "))
+save_frac = float(input("How much of your monthly salary do you want to save? "))
+annual_salary = float(input("How large is your annual salary? "))
+monthly_salary = annual_salary / 12
+current_savings = 0
+month = 0
+# r is the interest rate (here 4 %)
+r = 0.04
+while current_savings < vacation_price:
+    # Add a month
+    month += 1
+    # calculate the monthly saving
+    returns = current_savings * (r/12)
+    monthly_savings = monthly_salary * save_frac
+    current_savings = current_savings + monthly_savings + returns
+print("You need to save for " + str(month) + " month to afford you holiday.")
+    
+    
+    
+    
+    
 
 
 
