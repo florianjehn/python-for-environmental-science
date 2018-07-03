@@ -39,3 +39,18 @@ x = float(input("What is the value of x? "))
 y = float(input("What is the value of y? "))
 print("x raised to the power of y is " + str(x**y))
 print("log (base 2) of x is " + str(math.log2(x)))
+
+# Exercise 6
+a = int(input("Enter a number:\n"))
+b = int(input("Enter another number:\n"))
+
+remainder_1 = a % b 
+decimal_1 = remainder_1 * 10 // b
+remainder_2 = remainder_1 * 10 % b
+decimal_2 = remainder_2 * 10 // b
+remainder_3 = remainder_2 * 10 % b
+decimal_3 = remainder_3 * 10 // b
+
+print("The remainder of %s/%s is:" % (a, b)) # Or print("The remainder of " +str(a) + "/" + str(b) + " is:")
+result = str(decimal_1) + str(decimal_2) + str(decimal_3)
+print(result)
