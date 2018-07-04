@@ -93,7 +93,21 @@ def prompt_and_run():
         print(number)
         
 prompt_and_run()
-        
+
+# Exercise 6
+
+n = int(input("Which element of the Fibonacci Sequence do you want to calculate?\nPut in here (int): "))
+
+def fibonacci(n):
+    x = 1
+    y = 1
+    for i in range(n):
+        z = x + y
+        x = z
+        y = x
+    print(z)
+
+fibonacci(n)
         
 
     
