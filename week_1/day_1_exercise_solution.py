@@ -54,3 +54,12 @@ decimal_3 = remainder_3 * 10 // b
 print("The remainder of %s/%s is:" % (a, b)) # Or print("The remainder of " +str(a) + "/" + str(b) + " is:")
 result = str(decimal_1) + str(decimal_2) + str(decimal_3)
 print(result)
+
+# Exercise 7
+
+n= int(input("Enter the number you want to check: "))
+
+if n % 7 == 0:
+    print( str(n) + " is divisible by 7")
+else:
+    print( str(n) + " is not divisible by 7")
