@@ -7,6 +7,8 @@ Created on Wed Jul  4 09:39:55 2018
 import datetime
 import time
 import dateutil
+import random
+import os
 
 
 # Exercise 1
@@ -56,7 +58,7 @@ def print_n_pause():
         print("Hello")
         time.sleep(0.7)
         
-# print_n_pause()
+print_n_pause()
 
 
 # Exercise 5
@@ -103,8 +105,39 @@ double_day = double_day(bday1, bday2)
 print("The double day of {} and {} is {}".format(bday1, bday2, double_day))
     
 
-
-
+# Exercise 7
+def create_files():
+    """Creates the specified files"""
+    for i in range(10):
+        num = random.random()
+        # Pause to allow the timestamp to change. 
+        time.sleep(0.01)
+        now = time.time()
+        # Use 'with' to make reading and writing easier.  
+        with open(str(now) +  ".txt", "w", encoding='utf-8') as outfile:
+            outfile.write(str(num))
+            
+create_files()
+        
+        
+# Exercise 8
+def rewrite_files():
+    for file in os.listdir():
+        # Only consider txts
+        if file[-3:] == "txt":
+            with open(file, "r") as infile:
+                # Determine the new value               
+                num = float(infile.readline())
+                out_num = 1 if num > 0.5 else 0
+                # Get the date
+                timestamp = file[:-4]
+                date = datetime.datetime.fromtimestamp(float(timestamp))
+                # Write the files
+                with open(str(num) + ".txt", "w", encoding='utf-8') as outfile:
+                    outfile.write(str(date) + "\n\n\n" + str(out_num))
+                    
+rewrite_files()
+                
 
 
 
