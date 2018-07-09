@@ -3,4 +3,4 @@ Repo for the Jupyter notebooks and code for a programming course at the Justus-L
 
 If you want to contribute I'd be happy to hear from you. If any questions arise please contact [me](https://www.uni-giessen.de/fbz/fb09/institute/ilr/wasser/mitarbeiter/copy_of_houska).
 
-This course is based on Jupyter Notebooks, if you do not know how to use them, take a look [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook).
+This course is based on Jupyter Notebooks, if you do not know how to use them take a look [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook).
