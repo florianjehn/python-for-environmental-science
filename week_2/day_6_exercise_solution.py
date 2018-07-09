@@ -22,4 +22,10 @@ iris_df = load_iris()
 
 
 # Exercise 1
+# Get the sepal length
+print("The minimal sepal length is {} cm".format(iris_df["petal length (cm)"].min()))
+# Describe the target 0 group
+print(iris_df[iris_df["target"] == 0].describe())
+# Create a slice of the last two rows
+print(iris_df[-2:])
 
