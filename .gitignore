@@ -112,3 +112,5 @@ site/
 %USERPROFILE/.jupyter/migrated
 *.sqlite
 %USERPROFILE/.ipython/profile_default/startup/README
+*.xls
+*.xls
