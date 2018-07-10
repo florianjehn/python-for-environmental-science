@@ -10,7 +10,6 @@ __pycache__/
 *.rst
 *.gitignore
 # *.yml
-*.csv
 *.out
 *.in
 docs/*
@@ -112,3 +111,5 @@ site/
 %USERPROFILE/.jupyter/migrated
 *.sqlite
 %USERPROFILE/.ipython/profile_default/startup/README
+week_2/energy_formatted.csv
+week_2/probe_measurements.csv
