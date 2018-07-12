@@ -45,11 +45,11 @@ plt.plot(food, label="Food")
 plt.plot(feed, label="Feed")
 plt.xticks(rotation=90)
 plt.legend(frameon=True)
-plt.ylabel("Worldwide Production [tons]")
+plt.ylabel("Worldwide Amount [tons]")
 ax = plt.gca()
 ax.set_facecolor("white")
 ax.grid(color="grey", alpha=0.3)
-plt.savefig("worldwide_production.png", dpi=300, bbox_inches="tight")
+plt.savefig("worldwide.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
@@ -70,8 +70,8 @@ barley_feed_A = float(barley_feed_A)
 # Plot
 plt.bar(["Food", "Feed"], [barley_food_A, barley_feed_A])
 ax = plt.gca()
-plt.title("Barley Production in Afghanistan (1961)")
-plt.xlabel("Production [tons]")
+plt.title("Barley Amount in Afghanistan (1961)")
+plt.xlabel("Amount [tons]")
 ax.set_facecolor("white")
 ax.yaxis.grid(color="grey", alpha=0.3)
 plt.savefig("barley.png", dpi=200, bbox_inches="tight")
@@ -81,14 +81,14 @@ plt.close()
 # 3.5
 area_groups = fao.groupby("Area")
 # Create an empty Dataframe to store the results in
-results = pd.DataFrame(np.nan, index=fao["Area"].unique(), columns=["Total Production"])
+results = pd.DataFrame(np.nan, index=fao["Area"].unique(), columns=["Total Amount"])
 # Go through all countries and calculate the total result
 for area, area_df in area_groups:
     total = area_df.iloc[:, 10:].sum().sum()
     results.loc[area,:] = total
 
 # Get the results in the right order
-results = results.sort_values(by="Total Production", ascending=False).iloc[:50,:].sort_values(by="Total Production", ascending=True)
+results = results.sort_values(by="Total Amount", ascending=False).iloc[:50,:].sort_values(by="Total Amount", ascending=True)
 
 # Plot
 results.plot(kind="barh")
@@ -97,11 +97,11 @@ ax.set_facecolor("white")
 ax.legend_.remove()
 ax.xaxis.grid(color="grey", alpha=0.3, linestyle="-")
 plt.ylabel("Country")
-plt.xlabel("Total production 1961-2013 [tons]")
+plt.xlabel("Total Amount 1961-2013 [tons]")
 fig = plt.gcf()
 fig.tight_layout()
 fig.set_size_inches(10,10)
-plt.savefig("total_production.png", dpi=300, bbox_inches="tight")
+plt.savefig("total_amount.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
@@ -114,8 +114,8 @@ plt.scatter(food, feed)
 ax = plt.gca()
 ax.set_facecolor("white")
 ax.grid(color="grey", alpha=0.3, linestyle="-")
-plt.xlabel("Yearly Food Production [tons]")
-plt.ylabel("Yearly Feed Production [tons]")
+plt.xlabel("Yearly Food Amount [tons]")
+plt.ylabel("Yearly Feed Amount [tons]")
 fig = plt.gcf()
 fig.tight_layout()
 plt.savefig("scatter_feed_food.png", dpi=200, bbox_inches="tight")
@@ -140,12 +140,12 @@ ax1 = axes[0]
 ax2 = axes[1]
 
 ax1.bar(x=["North", "South"], height=[soy_north_early, soy_south_early])
-ax1.set_ylabel("Production [tons]")
+ax1.set_ylabel("Amount [tons]")
 ax1.set_title("\n1990-1999")
 ax2.bar(x=["North", "South"], height=[soy_north_late, soy_south_late])
 ax2.set_title("\n2000-2009")
 # Make a title for both
-fig.suptitle("Soybean Production seperated by northern and southern hemisphere\n", fontsize=14)
+fig.suptitle("Soybean Amount seperated by northern and southern hemisphere\n", fontsize=14)
 fig.tight_layout()
 plt.savefig("soy.png", dpi=200, bbox_inches="tight")
 plt.close()
@@ -161,9 +161,9 @@ ax.set_facecolor("white")
 ax.grid(color="grey", alpha=0.3, linestyle="-")
 fig = plt.gcf()
 fig.tight_layout()
-plt.xlabel("Total Production [tons]")
+plt.xlabel("Total Amount [tons]")
 plt.ylabel("Count")
-plt.title("Distribution of the Production of Food Oil")
+plt.title("Distribution of the Amount of Food Oil")
 plt.savefig("oil.png", dpi=200, bbox_inches="tight")
 plt.close()
 
