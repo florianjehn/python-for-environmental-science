@@ -86,7 +86,27 @@ while current_savings < vacation_price:
     current_savings = current_savings + monthly_savings + returns
 print("You need to save for " + str(month) + " month to afford you holiday.")
     
-    
+# Exercise 8
+
+import random
+
+#number = int(input("Enter a number\n"))
+number = 20
+guesses = 0
+
+random_number = random.randint(1, number+1)
+
+while True:
+    guesses += 1
+    guess = int(input("Take a guess!\n"))
+    if guess == random_number:
+        print("YOU WIN!!!")
+        print("It took you " + str(guesses) + " guesses.")
+        break
+    elif guess < random_number:
+        print("Your guess was to low.")
+    else:
+        print("Your guess was to high.")
     
     
     
