@@ -51,7 +51,7 @@ decimal_2 = remainder_2 * 10 // b
 remainder_3 = remainder_2 * 10 % b
 decimal_3 = remainder_3 * 10 // b
 
-print("The remainder of %s/%s is:" % (a, b)) # Or print("The remainder of " +str(a) + "/" + str(b) + " is:")
+print("The remainder of {} / {} is:".format(a, b)) # Or print("The remainder of " +str(a) + "/" + str(b) + " is:")
 result = str(decimal_1) + str(decimal_2) + str(decimal_3)
 print(result)
 
