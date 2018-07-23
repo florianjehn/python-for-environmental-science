@@ -107,7 +107,6 @@ while True:
     else:
         print("Your guess was to high.")
         
-#%%
 # Exercise 9
 import os
 print(os.name)

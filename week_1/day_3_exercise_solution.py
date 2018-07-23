@@ -94,11 +94,14 @@ def prompt_and_run():
         
 prompt_and_run()
 
-# Exercise 6
 
+# Exercise 6
 n = int(input("Which element of the Fibonacci Sequence do you want to calculate?\nPut in here (int): "))
 
 def fibonacci(n):
+    """
+    Calculates the fibonacci sequence to the nth number
+    """
     x = 1
     y = 1
     for i in range(n):
@@ -110,5 +113,66 @@ def fibonacci(n):
 fibonacci(n)
         
 
+# Exercise 7
+def largest_of_three(a,b,c):
+    """
+    Tells you which was the largest of the three numbers it is provided with
+    """
+    print("The largest of a, b and c is " + str(max(a,b,c)))
+    
+largest_of_three(1,3,4)
+
+
+# Exercise 8
+def reverse_string(word):
+    """Reverses the given string and returns it"""   
+    new_string = ""
+    index = len(word)
+    while index > 0:
+        index -= 1
+        new_string += word[index]
+    return new_string
+
+reverse_string("bla")
+    
+
+# Exercise 9
+def in_range(a,b,c):
+    """Checks if a is between b and c"""
+    return (a < b and a > c) or (a > b and a < c)
+
+print(in_range(5, 1, 10))
+print(in_range(5, 10, 1))
+print(in_range(5, 10, 12))
+    
+    
+# Exercise 10
+import random
+def random_num():
+    return random.randint(10, 101)
+
+def check_num(num):
+    return num < 20
+
+def printer(bool_val):
+    if bool_val:
+        print(1)
+    else:
+        print()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
