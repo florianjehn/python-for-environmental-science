@@ -87,7 +87,6 @@ while current_savings < vacation_price:
 print("You need to save for " + str(month) + " month to afford you holiday.")
     
 # Exercise 8
-
 import random
 
 #number = int(input("Enter a number\n"))
@@ -107,7 +106,78 @@ while True:
         print("Your guess was to low.")
     else:
         print("Your guess was to high.")
+        
+#%%
+# Exercise 9
+import os
+print(os.name)
+import platform
+print(platform.system())
+print(platform.release())
+
+# Exercise 10
+for i in range(1500, 2701):
+    if i % 7 == 0 and i % 5 == 0:
+        print(i)
+
+# Exercise 11
+for i in range(0,7):
+    if i == 3 or i == 6:
+        continue
+    print(i)
+
+# Exercise 12
+import string
+upper = string.ascii_uppercase
+lower = string.ascii_lowercase
+special = ["%", "&", "?"]
+while True:
+    pw = input("Give me a good password! ")
+    # Check the length
+    if len(pw) < 5 and len(pw) > 17:
+        print("Not a good password!")
+        continue
     
+    # Check for upper case and lowercase and specials
+    lower_in = False
+    upper_in = False
+    special_in = False
+    for char in pw:
+        if char in lower:
+            lower_in = True
+        if char in upper:
+            upper_in = True
+        if char in special:
+            special_in = True
+    if not lower_in or not upper_in or not special_in:
+        print("Not a good password!")
+        continue 
+    
+    # The program only gets here when everything above was correct
+    print("Good Job. You created a nice password!")
+    break
+
+# Exercise 13
+a = float(input("Side a? "))
+b = float(input("Side b? "))
+c = float(input("Side c? "))
+
+if a == b == c:
+    print("Equiliteral")
+elif a != b and a != c and b != c:
+    print("Scalen")
+else:
+    print("Isosceles")
+
+# Exercise 14
+my_miles = 10
+marathon = 42
+training_days = 0
+while my_miles < marathon:
+    my_miles *= 1.1
+    training_days += 1
+print("I need to train " + str(training_days) + " days")
+
     
     
 
