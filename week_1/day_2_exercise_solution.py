@@ -82,6 +82,7 @@ while current_savings < vacation_price:
     month += 1
     # calculate the monthly saving
     returns = current_savings * (r/12)
+    print(returns)
     monthly_savings = monthly_salary * save_frac
     current_savings = current_savings + monthly_savings + returns
 print("You need to save for " + str(month) + " month to afford you holiday.")
@@ -89,7 +90,6 @@ print("You need to save for " + str(month) + " month to afford you holiday.")
 # Exercise 8
 import random
 
-#number = int(input("Enter a number\n"))
 number = 20
 guesses = 0
 
