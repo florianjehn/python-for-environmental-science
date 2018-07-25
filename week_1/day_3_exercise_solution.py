@@ -156,10 +156,12 @@ def check_num(num):
 
 def printer(bool_val):
     if bool_val:
-        print(1)
+        print("1")
     else:
-        print()
+        print("0")
     
+for i in range(10):
+    printer(check_num(random_num()))
     
     
     
