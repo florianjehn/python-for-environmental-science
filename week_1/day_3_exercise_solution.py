@@ -102,15 +102,15 @@ def fibonacci(n):
     """
     Calculates the fibonacci sequence to the nth number
     """
-    x = 1
-    y = 1
+    last = 1
+    next_to_last = 1
     for i in range(n):
-        z = x + y
-        x = z
-        y = x
-    print(z)
+        new = last + next_to_last
+        last = new
+        next_to_last = last
+    print(new)
 
-fibonacci(n)
+fibonacci(5)
         
 
 # Exercise 7
@@ -149,12 +149,15 @@ print(in_range(5, 10, 12))
 # Exercise 10
 import random
 def random_num():
+    """Creates a random number between 10 and 100"""
     return random.randint(10, 101)
 
 def check_num(num):
+    """Checks if num is smaller than 20"""
     return num < 20
 
 def printer(bool_val):
+    """Prints 1 or 0 depending on bool_val""" 
     if bool_val:
         print("1")
     else:
