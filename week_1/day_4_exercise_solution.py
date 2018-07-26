@@ -105,10 +105,8 @@ inv = add_to_inventory(inv, dragon_loot)
 display_inventory(inv)
 
 # Exercise 8
-
-test = { x : x**2 for x in range(10)}
-
-print(test)
+my_dict = { x : x**2 for x in range(10)}
+print(my_dict)
 
 
 

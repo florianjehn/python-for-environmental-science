@@ -48,7 +48,7 @@ def print_twice(to_print):
 do_twice(print_twice, "bla")
 
 def do_four(f, val):
-    """Calls the funktion f with the argument val four times."""
+    """Calls the funktion f with the argument val four times using do_twice()."""
     do_twice(f, val)
     do_twice(f, val)
     
