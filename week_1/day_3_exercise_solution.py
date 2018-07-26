@@ -102,16 +102,16 @@ def fibonacci(n):
     """
     Calculates the fibonacci sequence to the nth number
     """
-    last = 1
-    next_to_last = 1
-    for i in range(n):
-        new = last + next_to_last
-        last = new
+    if n <= 2:
+        print (1)
+    last = next_to_last = 1
+    for i in range(2, n):
+        result = last + next_to_last
         next_to_last = last
-    print(new)
+        last = result
+    print(result)
 
-fibonacci(5)
-        
+fibonacci(n)
 
 # Exercise 7
 def largest_of_three(a,b,c):
