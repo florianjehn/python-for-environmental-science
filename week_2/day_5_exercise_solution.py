@@ -139,7 +139,7 @@ def rewrite_files():
 rewrite_files()
 
 
-# Exercise 8
+# Exercise 9
 
 import math
 
