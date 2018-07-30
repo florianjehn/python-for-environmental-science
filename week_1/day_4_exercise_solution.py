@@ -109,7 +109,8 @@ my_dict = { x : x**2 for x in range(10)}
 print(my_dict)
 
 
-
+# Exercise 9
+month = {"Jan": 31, "Feb": }
 
 
 
