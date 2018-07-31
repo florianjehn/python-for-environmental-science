@@ -33,23 +33,24 @@ print(iris_df[-2:])
 
 
 # Exercise 2
+import pandas as pd
 def load_energy():
     """Loads the energy file, skipping all useluss information and returns it as a dataframe"""
     energy = pd.read_excel("Energy Indicators.xls", skiprows=17, header=0,
                            skip_footer=53-15, na_values="...", usecols=[2,3,4,5])
     # Rename columns
-    energy.columns = ["Country", "Energy Supply [Petajoules]", "Energy Supply per Capita [Gigajoules]", "% Renewable"]
+    #energy.columns = ["Country", "Energy Supply [Petajoules]", "Energy Supply per Capita [Gigajoules]", "% Renewable"]
     
     # Exclude numbers from country names
-    energy["Country"] = energy["Country"].str.replace("\d+", "")
+   # energy["Country"] = energy["Country"].str.replace("\d+", "")
     
     # Delete the parentheses
-    energy["Country"] = energy["Country"].str.replace("\(.*\)", "")
+   # energy["Country"] = energy["Country"].str.replace("\(.*\)", "")
     
     return energy
     
 energy = load_energy()
-print(energy.describe())
+print(energy)
 
 
 # Exercise 3
