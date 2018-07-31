@@ -129,25 +129,21 @@ for i in range(0,7):
 import string
 upper = string.ascii_uppercase
 lower = string.ascii_lowercase
-special = ["%", "&", "?"]
 while True:
     pw = input("Give me a good password! ")
     # Check the length
-    if len(pw) < 5 and len(pw) > 17:
+    if len(pw) < 5 or len(pw) > 17:
         print("Not a good password!")
         continue
     
     # Check for upper case and lowercase and specials
     lower_in = False
     upper_in = False
-    special_in = False
     for char in pw:
         if char in lower:
             lower_in = True
         if char in upper:
             upper_in = True
-        if char in special:
-            special_in = True
     if not lower_in or not upper_in or not special_in:
         print("Not a good password!")
         continue 
