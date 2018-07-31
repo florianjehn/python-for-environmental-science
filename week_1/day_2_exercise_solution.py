@@ -3,25 +3,17 @@
 Created on Jun 08 10:11 2018
 @author(s): Florian U. Jehn
 """
-# Exercise 1 
-word = input("Word please!")
-if len(word) > 4:
-    print(word)
-    if len(word) == 5:
-        print("You choose a fine word, sir!")
-print(len(word))
-
-# Exercise 2
+# Exercise 1
 for i in range(1,11):
     print(i)
     
-# Exercise 3
+# Exercise 2
 import time
 seconds = time.time()
 minutes = seconds / 60
 print(str(minutes) +" minutes have passed since epoch")
 
-# Exercise 4
+# Exercise 3
 s1 = 10
 s2 = 5 
 s3 = 100
@@ -35,11 +27,11 @@ elif s3 > s1 + s2:
 else:
     print("Perfectly good triangle")
     
-# Exercise 5
+# Exercise 4
 for i in range(1,8):
     print(str(i) * i)    
     
-# Exercise 6
+# Exercise 5
 month = "jan"
 if month == "jan":
     print(31)
@@ -68,7 +60,7 @@ elif month == "dec":
 else:
     print("you gave me no month")
     
-# Exercise 7
+# Exercise 6
 vacation_price = float(input("How expensive should the holiday be? "))
 save_frac = float(input("How much of your monthly salary do you want to save? "))
 annual_salary = float(input("How large is your annual salary? "))
@@ -87,7 +79,7 @@ while current_savings < vacation_price:
     current_savings = current_savings + monthly_savings + returns
 print("You need to save for " + str(month) + " month to afford you holiday.")
     
-# Exercise 8
+# Exercise 7
 import random
 
 number = 20
@@ -107,25 +99,25 @@ while True:
     else:
         print("Your guess was to high.")
         
-# Exercise 9
+# Exercise 8
 import os
 print(os.name)
 import platform
 print(platform.system())
 print(platform.release())
 
-# Exercise 10
+# Exercise 9
 for i in range(1500, 2701):
     if i % 7 == 0 and i % 5 == 0:
         print(i)
 
-# Exercise 11
+# Exercise 10
 for i in range(0,7):
     if i == 3 or i == 6:
         continue
     print(i)
 
-# Exercise 12
+# Exercise 11
 import string
 upper = string.ascii_uppercase
 lower = string.ascii_lowercase
@@ -152,7 +144,7 @@ while True:
     print("Good Job. You created a nice password!")
     break
 
-# Exercise 13
+# Exercise 12
 a = float(input("Side a? "))
 b = float(input("Side b? "))
 c = float(input("Side c? "))
@@ -164,7 +156,7 @@ elif a != b and a != c and b != c:
 else:
     print("Isosceles")
 
-# Exercise 14
+# Exercise 13
 my_miles = 10
 marathon = 42
 training_days = 0
