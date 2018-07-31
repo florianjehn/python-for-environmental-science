@@ -39,13 +39,13 @@ def load_energy():
     energy = pd.read_excel("Energy Indicators.xls", skiprows=17, header=0,
                            skip_footer=53-15, na_values="...", usecols=[2,3,4,5])
     # Rename columns
-    #energy.columns = ["Country", "Energy Supply [Petajoules]", "Energy Supply per Capita [Gigajoules]", "% Renewable"]
+    energy.columns = ["Country", "Energy Supply [Petajoules]", "Energy Supply per Capita [Gigajoules]", "% Renewable"]
     
     # Exclude numbers from country names
-   # energy["Country"] = energy["Country"].str.replace("\d+", "")
+    energy["Country"] = energy["Country"].str.replace("\d+", "")
     
     # Delete the parentheses
-   # energy["Country"] = energy["Country"].str.replace("\(.*\)", "")
+    energy["Country"] = energy["Country"].str.replace("\(.*\)", "")
     
     return energy
     
