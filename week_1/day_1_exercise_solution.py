@@ -37,25 +37,31 @@ print(fahrenheit)
 # Exercise 5
 x = float(input("What is the value of x? "))
 y = float(input("What is the value of y? "))
-print("x raised to the power of y is " + str(x**y))
+print("x raised to the power of y is " + str(x ** y))
 print("log (base 2) of x is " + str(math.log2(x)))
 
 # Exercise 6
 a = int(input("Enter a number:\n"))
 b = int(input("Enter another number:\n"))
 
-remainder_1 = a % b 
-decimal_1 = remainder_1 * 10 // b
-remainder_2 = remainder_1 * 10 % b
-decimal_2 = remainder_2 * 10 // b
-remainder_3 = remainder_2 * 10 % b
-decimal_3 = remainder_3 * 10 // b
-
-print("The remainder of {} / {} is:".format(a, b)) # Or print("The remainder of " +str(a) + "/" + str(b) + " is:")
-result = str(decimal_1) + str(decimal_2) + str(decimal_3)
-print(result)
+print("Division " + str(a / b))
+print("Integer Division " + str(a // b))
+print("Remainder " + str(a % b))
 
 # Exercise 7
 n= int(input("Enter the number you want to check: "))
 print("The remainder is: " + str(n % 7))
 print("If the remainder is 0 your number is divisible completely")
+
+# Exercise 8
+first = float(input("Number please: "))
+second = float(input("Number please: "))
+third = float(input("Number please: "))
+print("Multiplying the first number by the second number and dividing by the third")
+print("Result: " + str((first * second) / third))
+
+# Exercise 9
+import math
+radius = float(input("Radius please: "))
+circum = math.pi * radius * 2
+print("Given a radius of " + str(radius) + ", the circle has a circumference of " + str(circum))
