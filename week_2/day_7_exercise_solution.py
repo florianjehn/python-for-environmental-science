@@ -9,9 +9,38 @@ import matplotlib.pyplot as plt
 # Import seaborn to get nicer plots
 import seaborn as sns
 import numpy as np
+import random
 
 
 # Exercise 2
+x = [random.randint(0,1000) for i in range(1000)]     
+y = [random.randint(0,1000) for i in range(1000)]     
+plt.scatter(x, y, color="black", alpha=0.5)
+plt.close()
+
+# Exercise 3
+x = [i for i in range(50)]
+y = [3 * i for i in range(50)]
+plt.plot(x,y, label="a wonderful line")
+plt.title("Draw a line")
+plt.xlabel("x-axis")
+plt.ylabel("y-axis")
+plt.legend()
+plt.close()
+
+
+# Exercise 4
+sample = [random.randint(0, 101) for i in range(30)]
+plt.boxplot(sample)
+plt.legend()
+
+
+# Exercise 5
+sample_hist = [random.random() for i in range(1000)]
+plt.hist(sample_hist, histtype="step")
+
+
+# Exercise 6
 pokemon = pd.read_csv("pokemon.csv")
 plot_attributes = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 pokemon_plot = pokemon.loc[:, plot_attributes]
@@ -22,8 +51,8 @@ plt.savefig("pokemon_boxplots.png", dpi=200, bbox_inches="tight")
 plt.close()
 
 
-# Exercise 3
-# 3.1 
+# Exercise 7
+# 7.1 
 fao = pd.read_csv("FAO.csv", encoding="'latin-1'")
 # The code are understood as numeric, but are categorical
 fao["Area Code"] = fao["Area Code"].astype('category')
@@ -32,11 +61,11 @@ fao["Element Code"] = fao["Element Code"].astype('category')
 # print(fao.describe(include="all"))
 
 
-# 3.2
+# 7.2
 print(list(fao["Item"].unique()))
 
 
-# 3.3
+# 7.3
 # Get the data
 food = fao.loc[fao["Element"]=="Food",:].sum()[10:]
 feed = fao.loc[fao["Element"]=="Feed",:].sum()[10:]
@@ -53,7 +82,7 @@ plt.savefig("worldwide.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
-# 3.4
+# 7.4
 # Get the food value
 barley_food_A = fao.loc[fao["Element"]=="Food",:]
 barley_food_A = barley_food_A.loc[barley_food_A["Item"]=="Barley and products",:]
@@ -78,7 +107,7 @@ plt.savefig("barley.png", dpi=200, bbox_inches="tight")
 plt.close()
 
 
-# 3.5
+# 7.5
 area_groups = fao.groupby("Area")
 # Create an empty Dataframe to store the results in
 results = pd.DataFrame(np.nan, index=fao["Area"].unique(), columns=["Total Amount"])
@@ -105,7 +134,7 @@ plt.savefig("total_amount.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 
-# 3.6
+# 7.6
 # Get the data
 food = fao.loc[fao["Element"]=="Food",:].sum()[10:]
 feed = fao.loc[fao["Element"]=="Feed",:].sum()[10:]
@@ -122,7 +151,7 @@ plt.savefig("scatter_feed_food.png", dpi=200, bbox_inches="tight")
 plt.close()
 
 
-# 3.7
+# 7.7
 # Create the right column names with list comprehension
 late = ["Y" + str(year) for year in range(2000, 2010)]
 early = ["Y" + str(year) for year in range(1990, 2000)]
@@ -151,7 +180,7 @@ plt.savefig("soy.png", dpi=200, bbox_inches="tight")
 plt.close()
 
 
-# 3.8
+# 7.8
 # Get data
 oil = fao.loc[fao["Item"].str.contains("Oil"), :].groupby("Area").sum()["Y2000"]
 # Plot
