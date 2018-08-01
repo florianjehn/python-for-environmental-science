@@ -33,7 +33,6 @@ print(iris_df[-2:])
 
 
 # Exercise 2
-import pandas as pd
 def load_energy():
     """Loads the energy file, skipping all useluss information and returns it as a dataframe"""
     energy = pd.read_excel("Energy Indicators.xls", skiprows=17, header=0,
@@ -84,7 +83,7 @@ pokemon = pd.read_csv("pokemon.csv")
 grouped_pokemon = pokemon.groupby("Type 1")
 for group_name, group_df in grouped_pokemon:
     print("Type 1: {}".format(group_name))
-    print(group_df.iloc[:10,:]["Name"])
+    print(group_df.iloc[:10,:]["Name"].values)
     
 # Create the dictionary
 poke_dict = {}
