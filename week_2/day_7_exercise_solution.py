@@ -68,16 +68,40 @@ print(list(fao["Item"].unique()))
 # 7.3
 # Get the data
 food = fao.loc[fao["Element"]=="Food",:].sum()[10:]
+food.index = food.index.str.replace("Y", "")
 feed = fao.loc[fao["Element"]=="Feed",:].sum()[10:]
+feed.index = food.index.str.replace("Y", "")
+
 # Plot
+alpha = 0.6
+
 plt.plot(food, label="Food")
 plt.plot(feed, label="Feed")
 plt.xticks(rotation=90)
-plt.legend(frameon=True)
-plt.ylabel("Worldwide Amount [tons]")
+legend = plt.legend(frameon = 1)
+frame = legend.get_frame()
+frame.set_color('white')
+frame.set_edgecolor("lightgray")
+for text in legend.get_texts():
+    plt.setp(text, alpha=alpha)
+
+plt.ylabel("Worldwide Production [tons]", alpha=alpha)
+plt.xlabel("Year", alpha=alpha)
+plt.title("Comparison of the Production of Food and Feed 1961 to 2013", alpha=alpha)
 ax = plt.gca()
 ax.set_facecolor("white")
-ax.grid(color="grey", alpha=0.3)
+ax.grid(color="grey", alpha=0.1)
+plt.setp(ax.get_xticklabels(), alpha=alpha)
+plt.setp(ax.yaxis.get_offset_text(), alpha=alpha)
+
+plt.setp(ax.get_yticklabels(), alpha=alpha)
+
+for i, label in enumerate(ax.xaxis.get_ticklabels()):
+    if i % 4 != 0:
+        label.set_visible(False)
+
+fig = plt.gcf()
+fig.set_size_inches(10, 1.5)
 plt.savefig("worldwide.png", dpi=300, bbox_inches="tight")
 plt.close()
 
