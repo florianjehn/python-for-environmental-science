@@ -72,36 +72,44 @@ food.index = food.index.str.replace("Y", "")
 feed = fao.loc[fao["Element"]=="Feed",:].sum()[10:]
 feed.index = food.index.str.replace("Y", "")
 
-# Plot
-alpha = 0.6
+# Plot food and feed. Here I used quite a lot of different formatting, so
+# you can see many of the things you can modify
 
+# I usually fix the alpha somewhere in a variable, so I can change it more easily 
+# for all the parts where I use it
+alpha = 0.6
+# Plot the lines
 plt.plot(food, label="Food")
 plt.plot(feed, label="Feed")
+# Get the current axes object
+ax = plt.gca()
+# Change the rotation of the ticklabels and only show every fourth
 plt.xticks(rotation=90)
+for i, label in enumerate(ax.xaxis.get_ticklabels()):
+    if i % 4 != 0:
+        label.set_visible(False)
+# Create a label and make it fit in more nicely
 legend = plt.legend(frameon = 1)
 frame = legend.get_frame()
 frame.set_color('white')
 frame.set_edgecolor("lightgray")
 for text in legend.get_texts():
     plt.setp(text, alpha=alpha)
-
+# Lalbel everything correctly
 plt.ylabel("Worldwide Production [tons]", alpha=alpha)
 plt.xlabel("Year", alpha=alpha)
 plt.title("Comparison of the Production of Food and Feed 1961 to 2013", alpha=alpha)
-ax = plt.gca()
+# Get a nice grid in the background
 ax.set_facecolor("white")
 ax.grid(color="grey", alpha=0.1)
+# Make the lalbels more nicer to read
 plt.setp(ax.get_xticklabels(), alpha=alpha)
 plt.setp(ax.yaxis.get_offset_text(), alpha=alpha)
-
 plt.setp(ax.get_yticklabels(), alpha=alpha)
-
-for i, label in enumerate(ax.xaxis.get_ticklabels()):
-    if i % 4 != 0:
-        label.set_visible(False)
-
+# Change the size of the figure, so it is wider
 fig = plt.gcf()
 fig.set_size_inches(10, 1.5)
+# Finally save the beauty
 plt.savefig("worldwide.png", dpi=300, bbox_inches="tight")
 plt.close()
 
