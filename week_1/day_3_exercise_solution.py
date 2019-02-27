@@ -35,27 +35,6 @@ print(c(x, y+3, x+y))
 
 
 # Exercise 3
-def do_twice(f, val):
-    """Calls the funktion f with the argument val two times."""
-    f(val)
-    f(val)
-    
-def print_twice(to_print):
-    """Prints the given parameter twice."""
-    print(to_print)
-    print(to_print)
-    
-do_twice(print_twice, "bla")
-
-def do_four(f, val):
-    """Calls the funktion f with the argument val four times using do_twice()."""
-    do_twice(f, val)
-    do_twice(f, val)
-    
-do_four(print_twice, "that is a lot of printing")
-
-
-# Exercise 4
 def adder():
     """Adds all the numbers the user gives until "done" is typed."""
     print("Type a number or 'done' when finished")
@@ -73,7 +52,7 @@ def adder():
 print("The result is: " + str(adder()))
 
 
-# Exercise 5
+# Exercise 4
 def collatz(number):
     """Creates the next number in a collatz sequence"""
     if number % 2 == 0:
@@ -95,7 +74,7 @@ def prompt_and_run():
 prompt_and_run()
 
 
-# Exercise 6
+# Exercise 5
 n = int(input("Which element of the Fibonacci Sequence do you want to calculate?\nPut in here (int): "))
 
 def fibonacci(n):
@@ -113,7 +92,7 @@ def fibonacci(n):
 
 fibonacci(n)
 
-# Exercise 7
+# Exercise 6
 def largest_of_three(a,b,c):
     """
     Tells you which was the largest of the three numbers it is provided with
@@ -123,7 +102,7 @@ def largest_of_three(a,b,c):
 largest_of_three(1,3,4)
 
 
-# Exercise 8
+# Exercise 7
 def reverse_string(word):
     """Reverses the given string and returns it"""   
     new_string = ""
@@ -136,7 +115,7 @@ def reverse_string(word):
 reverse_string("bla")
     
 
-# Exercise 9
+# Exercise 8
 def in_range(a,b,c):
     """Checks if a is between b and c"""
     return (a < b and a > c) or (a > b and a < c)
@@ -146,7 +125,7 @@ print(in_range(5, 10, 1))
 print(in_range(5, 10, 12))
     
     
-# Exercise 10
+# Exercise 9
 import random
 def random_num():
     """Creates a random number between 10 and 100"""
