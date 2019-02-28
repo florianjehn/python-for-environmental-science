@@ -84,6 +84,7 @@ def display_inventory(inv):
     print("Inventory:")
     for item, amount in inv.items():
         print(amount, item)
+    print("Total amount: "+str(sum(inv.values())))
         
 display_inventory(inv)
 
