@@ -115,9 +115,9 @@ def days_of_month(month):
     """Returns the day of a month"""    
     month_lookup = {"Jan": 31, "Feb": 28, "Mar": 31, "Apr":30, "May":31, "Jun":30, "Jul":31,
              "Aug": 31, "Sep": 30, "Oct": 31, "Nov":30, "Dec": 31}
-    return month_lookup[month]
+    print(month_lookup[month])
 
-print(days_of_month("Jan"))
+days_of_month("Jan")
 
 
 
