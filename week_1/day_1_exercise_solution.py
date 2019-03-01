@@ -38,7 +38,6 @@ print(fahrenheit)
 x = float(input("What is the value of x? "))
 y = float(input("What is the value of y? "))
 print("x raised to the power of y is " + str(x ** y))
-print("log (base 2) of x is " + str(math.log2(x)))
 
 # Exercise 6
 a = int(input("Enter a number:\n"))

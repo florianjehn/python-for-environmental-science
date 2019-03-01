@@ -60,7 +60,18 @@ elif month == "dec":
 else:
     print("you gave me no month")
     
+
 # Exercise 6
+my_miles = 10
+marathon = 42
+training_days = 0
+while my_miles < marathon:
+    my_miles *= 1.1
+    training_days += 1
+print("I need to train " + str(training_days) + " days")
+    
+
+# Exercise 7
 vacation_price = float(input("How expensive should the holiday be? "))
 save_frac = float(input("How much of your monthly salary do you want to save? "))
 annual_salary = float(input("How large is your annual salary? "))
@@ -79,7 +90,7 @@ while current_savings < vacation_price:
     current_savings = current_savings + monthly_savings + returns
 print("You need to save for " + str(month) + " month to afford you holiday.")
     
-# Exercise 7
+# Exercise 8
 import random
 
 number = 20
@@ -99,51 +110,24 @@ while True:
     else:
         print("Your guess was to high.")
         
-# Exercise 8
+# Exercise 9
 import os
 print(os.name)
 import platform
 print(platform.system())
 print(platform.release())
 
-# Exercise 9
+# Exercise 10
 for i in range(1500, 2701):
     if i % 7 == 0 and i % 5 == 0:
         print(i)
 
-# Exercise 10
+# Exercise 11
 for i in range(0,7):
     if i == 3 or i == 6:
         continue
     print(i)
-
-# Exercise 11
-import string
-upper = string.ascii_uppercase
-lower = string.ascii_lowercase
-while True:
-    pw = input("Give me a good password! ")
-    # Check the length
-    if len(pw) < 5 or len(pw) > 17:
-        print("Not a good password!")
-        continue
     
-    # Check for upper case and lowercase and specials
-    lower_in = False
-    upper_in = False
-    for char in pw:
-        if char in lower:
-            lower_in = True
-        if char in upper:
-            upper_in = True
-    if not lower_in or not upper_in or not special_in:
-        print("Not a good password!")
-        continue 
-    
-    # The program only gets here when everything above was correct
-    print("Good Job. You created a nice password!")
-    break
-
 # Exercise 12
 a = float(input("Side a? "))
 b = float(input("Side b? "))
@@ -157,13 +141,40 @@ else:
     print("Isosceles")
 
 # Exercise 13
-my_miles = 10
-marathon = 42
-training_days = 0
-while my_miles < marathon:
-    my_miles *= 1.1
-    training_days += 1
-print("I need to train " + str(training_days) + " days")
+import string
+upper = string.ascii_uppercase
+lower = string.ascii_lowercase
+digits = string.digits
+while True:
+    pw = input("Give me a good password! ")
+    # Check the length
+    if len(pw) < 5 or len(pw) > 17:
+        print("Not a good password!")
+        continue
+    
+    # Check for upper case and lowercase and specials
+    lower_in = False
+    upper_in = False
+    digits_in = False
+    for char in pw:
+        if char in lower:
+            lower_in = True
+            continue
+        if char in upper:
+            upper_in = True
+            continue
+        if char in digits:
+            digits_in = True
+            
+    if not lower_in or not upper_in or not digits:
+        print("Not a good password!")
+        continue 
+    
+    # The program only gets here when everything above was correct
+    print("Good Job. You created a nice password!")
+    break
+
+
 
     
     
