@@ -18,6 +18,16 @@ print(calc_base(1000, 18))
 
 
 # Exercise 2
+def in_range(a,b,c):
+    """Checks if a is between b and c"""
+    return (a < b and a > c) or (a > b and a < c)
+
+print(in_range(5, 1, 10))
+print(in_range(5, 10, 1))
+print(in_range(5, 10, 12))
+
+
+# Exercise 3
 def b(z):
     prod = a(z, z)
     print(z, prod)
@@ -34,7 +44,7 @@ y = x + 1
 print(c(x, y+3, x+y))
 
 
-# Exercise 3
+# Exercise 4
 def adder():
     """Adds all the numbers the user gives until "done" is typed."""
     print("Type a number or 'done' when finished")
@@ -52,7 +62,7 @@ def adder():
 print("The result is: " + str(adder()))
 
 
-# Exercise 4
+# Exercise 5
 def collatz(number):
     """Creates the next number in a collatz sequence"""
     if number % 2 == 0:
@@ -74,7 +84,7 @@ def prompt_and_run():
 prompt_and_run()
 
 
-# Exercise 5
+# Exercise 6
 n = int(input("Which element of the Fibonacci Sequence do you want to calculate?\nPut in here (int): "))
 
 def fibonacci(n):
@@ -92,7 +102,8 @@ def fibonacci(n):
 
 fibonacci(n)
 
-# Exercise 6
+
+# Exercise 7
 def largest_of_three(a,b,c):
     """
     Tells you which was the largest of the three numbers it is provided with
@@ -102,7 +113,7 @@ def largest_of_three(a,b,c):
 largest_of_three(1,3,4)
 
 
-# Exercise 7
+# Exercise 8
 def reverse_string(word):
     """Reverses the given string and returns it"""   
     new_string = ""
@@ -113,17 +124,7 @@ def reverse_string(word):
     return new_string
 
 reverse_string("bla")
-    
-
-# Exercise 8
-def in_range(a,b,c):
-    """Checks if a is between b and c"""
-    return (a < b and a > c) or (a > b and a < c)
-
-print(in_range(5, 1, 10))
-print(in_range(5, 10, 1))
-print(in_range(5, 10, 12))
-    
+      
     
 # Exercise 9
 import random
