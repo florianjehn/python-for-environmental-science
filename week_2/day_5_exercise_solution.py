@@ -76,6 +76,7 @@ print_n_pause()
 
 
 # Exercise 5
+import datetime
 def bday_timer(bday):
     """Tells how old you are and how long it is till your next birthday."""
     # Calculate the age
@@ -113,7 +114,7 @@ def double_day(bday1, bday2):
         double_day = bday2 + delta
     return double_day
 
-bday1 = datetime.date(1990, 8, 31)
+bday1 = datetime.date(1990, 1, 9)
 bday2 = datetime.date(1989, 12, 23)
 double_day = double_day(bday1, bday2)
 print("The double day of {} and {} is {}".format(bday1, bday2, double_day))
