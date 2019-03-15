@@ -41,6 +41,7 @@ plt.hist(sample_hist, histtype="step")
 
 
 # Exercise 6
+
 pokemon = pd.read_csv("pokemon.csv")
 plot_attributes = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 pokemon_plot = pokemon.loc[:, plot_attributes]
