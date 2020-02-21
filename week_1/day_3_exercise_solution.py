@@ -10,7 +10,7 @@ import math
 def calc_base(vol, height):
     """
     Calculates the length of one side of the base of a rectangular pyramid,
-    given the volumne and height.
+    given the volume and height.
     """
     return math.sqrt((3 * vol) / height)
 
@@ -64,7 +64,7 @@ print("The result is: " + str(adder()))
 
 # Exercise 5
 def collatz(number):
-    """Creates the next number in a collatz sequence"""
+    """Creates the next number in a Collatz sequence"""
     if number % 2 == 0:
         return int(number / 2)
     else:
@@ -72,7 +72,7 @@ def collatz(number):
 
 def prompt_and_run():
     """
-    Prompts the user for a starting number for the collatz sequence and 
+    Prompts the user for a starting number for the Collatz sequence and 
     prints the sequence.
     """
     number = int(input("Please provide a starting number (int): "))
@@ -85,11 +85,11 @@ prompt_and_run()
 
 
 # Exercise 6
-n = int(input("Which element of the Fibonacci Sequence do you want to calculate?\nPut in here (int): "))
+n = int(input("Which element of the Fibonacci sequence do you want to calculate?\nPut in here (int): "))
 
 def fibonacci(n):
     """
-    Calculates the fibonacci sequence to the nth number
+    Calculates the Fibonacci sequence to the nth number
     """
     if n <= 2:
         print (1)
@@ -145,19 +145,3 @@ def printer(bool_val):
     
 for i in range(10):
     printer(check_num(random_num()))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
