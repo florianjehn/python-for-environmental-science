@@ -88,7 +88,7 @@ while current_savings < vacation_price:
     print(returns)
     monthly_savings = monthly_salary * save_frac
     current_savings = current_savings + monthly_savings + returns
-print("You need to save for " + str(month) + " month to afford you holiday.")
+print("You need to save for " + str(month) + " months to afford your holiday.")
     
 # Exercise 8
 import random
@@ -106,9 +106,9 @@ while True:
         print("It took you " + str(guesses) + " guesses.")
         break
     elif guess < random_number:
-        print("Your guess was to low.")
+        print("Your guess was too low.")
     else:
-        print("Your guess was to high.")
+        print("Your guess was too high.")
         
 # Exercise 9
 import os
@@ -134,9 +134,9 @@ b = float(input("Side b? "))
 c = float(input("Side c? "))
 
 if a == b == c:
-    print("Equiliteral")
+    print("Equilateral")
 elif a != b and a != c and b != c:
-    print("Scalen")
+    print("Scalene")
 else:
     print("Isosceles")
 
