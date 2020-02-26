@@ -66,7 +66,7 @@ print(transform("This is a sentence!"))
 
 # Exercise 4
 def print_n_pause():
-    """Prints hello 10 seconds longs and makes pauses in between"""
+    """Prints hello for 10 seconds and makes pauses in between"""
     start = datetime.datetime.now()
     while (datetime.datetime.now() - start).seconds < 10:
         print("Hello")
@@ -105,7 +105,7 @@ bday_timer(bday)
 
 # Exercise 6
 def double_day(bday1, bday2):
-    """Calculates the day when one person is double as old as the other one"""
+    """Calculates the day when one person is twice as old as the other one"""
     if bday1 > bday2:
         delta = bday1 - bday2
         double_day = bday1 + delta
