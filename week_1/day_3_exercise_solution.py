@@ -98,7 +98,7 @@ def fibonacci(n):
         result = last + next_to_last
         next_to_last = last
         last = result
-    print(result)
+    print(last)
 
 fibonacci(n)
 
