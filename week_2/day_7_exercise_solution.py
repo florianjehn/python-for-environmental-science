@@ -205,7 +205,7 @@ ax1.set_title("\n1990-1999")
 ax2.bar(x=["North", "South"], height=[soy_north_late, soy_south_late])
 ax2.set_title("\n2000-2009")
 # Make a title for both
-fig.suptitle("Soybean Amount seperated by northern and southern hemisphere\n", fontsize=14)
+fig.suptitle("Soybean Amount divided into northern and southern hemisphere\n", fontsize=14)
 fig.tight_layout()
 plt.savefig("soy.png", dpi=200, bbox_inches="tight")
 plt.close()
