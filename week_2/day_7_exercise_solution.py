@@ -18,6 +18,7 @@ y = [random.randint(0,1000) for i in range(1000)]
 plt.scatter(x, y, color="black", alpha=0.5)
 plt.close()
 
+
 # Exercise 3
 x = [i for i in range(50)]
 y = [3 * i for i in range(50)]
@@ -32,16 +33,16 @@ plt.close()
 # Exercise 4
 sample = [random.randint(0, 101) for i in range(30)]
 plt.boxplot(sample)
-plt.legend()
+plt.close()
 
 
 # Exercise 5
 sample_hist = [random.random() for i in range(1000)]
 plt.hist(sample_hist, histtype="step")
+plt.close()
 
 
 # Exercise 6
-
 pokemon = pd.read_csv("pokemon.csv")
 plot_attributes = ["HP", "Attack", "Defense", "Sp. Atk", "Sp. Def", "Speed"]
 pokemon_plot = pokemon.loc[:, plot_attributes]
@@ -55,7 +56,7 @@ plt.close()
 # Exercise 7
 # 7.1 
 fao = pd.read_csv("FAO.csv", encoding="'latin-1'")
-# The code are understood as numeric, but are categorical
+# The codes are understood as numeric, but are categorical
 fao["Area Code"] = fao["Area Code"].astype('category')
 fao["Item Code"] = fao["Item Code"].astype('category')
 fao["Element Code"] = fao["Element Code"].astype('category')
@@ -96,14 +97,14 @@ frame.set_color('white')
 frame.set_edgecolor("lightgray")
 for text in legend.get_texts():
     plt.setp(text, alpha=alpha)
-# Lalbel everything correctly
+# Label everything correctly
 plt.ylabel("Worldwide Production [tons]", alpha=alpha)
 plt.xlabel("Year", alpha=alpha)
 plt.title("Comparison of the Production of Food and Feed 1961 to 2013", alpha=alpha)
 # Get a nice grid in the background
 ax.set_facecolor("white")
 ax.grid(color="grey", alpha=0.1)
-# Make the lalbels more nicer to read
+# Make the labels nicer to read
 plt.setp(ax.get_xticklabels(), alpha=alpha)
 plt.setp(ax.yaxis.get_offset_text(), alpha=alpha)
 plt.setp(ax.get_yticklabels(), alpha=alpha)
@@ -142,7 +143,7 @@ plt.close()
 
 # 7.5
 area_groups = fao.groupby("Area")
-# Create an empty Dataframe to store the results in
+# Create an empty dataframe to store the results in
 results = pd.DataFrame(np.nan, index=fao["Area"].unique(), columns=["Total Amount"])
 # Go through all countries and calculate the total result
 for area, area_df in area_groups:
