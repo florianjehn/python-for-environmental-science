@@ -27,19 +27,16 @@ plt.title("Draw a line")
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")
 plt.legend()
-plt.close()
 
 
 # Exercise 4
 sample = [random.randint(0, 101) for i in range(30)]
 plt.boxplot(sample)
-plt.close()
 
 
 # Exercise 5
 sample_hist = [random.random() for i in range(1000)]
 plt.hist(sample_hist, histtype="step")
-plt.close()
 
 
 # Exercise 6
