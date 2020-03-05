@@ -36,7 +36,7 @@ print(iris_df[-2:])
 def load_energy():
     """Loads the energy file, skipping all useless information and returns it as a dataframe"""
     energy = pd.read_excel("Energy Indicators.xls", skiprows=17, header=0,
-                           skip_footer=53-15, na_values="...", usecols=[2,3,4,5])
+                           skipfooter=53-15, na_values="...", usecols=[2,3,4,5])
     # Rename columns
     energy.columns = ["Country", "Energy Supply [Petajoules]", "Energy Supply per Capita [Gigajoules]", "% Renewable"]
     
