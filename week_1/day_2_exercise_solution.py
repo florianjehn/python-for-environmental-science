@@ -14,6 +14,13 @@ minutes = seconds / 60
 print(str(minutes) +" minutes have passed since epoch")
 
 # Exercise 3
+import os
+print(os.name)
+import platform
+print(platform.system())
+print(platform.release())
+
+# Exercise 4
 s1 = 10
 s2 = 5 
 s3 = 100
@@ -27,11 +34,11 @@ elif s3 > s1 + s2:
 else:
     print("Perfectly good triangle")
     
-# Exercise 4
+# Exercise 5
 for i in range(1,8):
     print(str(i) * i)    
     
-# Exercise 5
+# Exercise 6
 month = "jan"
 if month == "jan":
     print(31)
@@ -60,8 +67,21 @@ elif month == "dec":
 else:
     print("you gave me no month")
     
+    
+# Exercise 7
+for i in range(1500, 2701):
+    if i % 7 == 0 and i % 5 == 0:
+        print(i)
+        
 
-# Exercise 6
+# Exercise 8
+for i in range(0,7):
+    if i == 3 or i == 6:
+        continue
+    print(i)
+    
+  
+# Exercise 9
 my_miles = 10
 marathon = 42
 training_days = 0
@@ -71,7 +91,7 @@ while my_miles < marathon:
 print("I need to train " + str(training_days) + " days")
     
 
-# Exercise 7
+# Exercise 10
 vacation_price = float(input("How expensive should the holiday be? "))
 save_frac = float(input("How much of your monthly salary do you want to save? "))
 annual_salary = float(input("How large is your annual salary? "))
@@ -90,7 +110,7 @@ while current_savings < vacation_price:
     current_savings = current_savings + monthly_savings + returns
 print("You need to save for " + str(month) + " months to afford your holiday.")
     
-# Exercise 8
+# Exercise 11
 import random
 
 number = 20
@@ -109,24 +129,7 @@ while True:
         print("Your guess was too low.")
     else:
         print("Your guess was too high.")
-        
-# Exercise 9
-import os
-print(os.name)
-import platform
-print(platform.system())
-print(platform.release())
 
-# Exercise 10
-for i in range(1500, 2701):
-    if i % 7 == 0 and i % 5 == 0:
-        print(i)
-
-# Exercise 11
-for i in range(0,7):
-    if i == 3 or i == 6:
-        continue
-    print(i)
     
 # Exercise 12
 a = float(input("Side a? "))
