@@ -77,6 +77,20 @@ print(calculate_probability(10000, 23))
 
 
 # Exercise 6
+def days_of_month(month):
+    """Returns the day of a month"""    
+    month_lookup = {"Jan": 31, "Feb": 28, "Mar": 31, "Apr":30, "May":31, "Jun":30, "Jul":31,
+             "Aug": 31, "Sep": 30, "Oct": 31, "Nov":30, "Dec": 31}
+    print(month_lookup[month])
+
+days_of_month("Jan")
+
+
+# Exercise 7
+my_dict = { x : x**2 for x in range(10)}
+print(my_dict)
+
+# Exercise 8
 inv = {'rope': 1, 'torch': 6, 'gold coin': 42, 'dagger': 1, 'arrow': 12}
 
 def display_inventory(inv):
@@ -105,19 +119,9 @@ dragon_loot = ['gold coin', 'dagger', 'gold coin', 'gold coin', 'ruby']
 inv = add_to_inventory(inv, dragon_loot)
 display_inventory(inv)
 
-# Exercise 8
-my_dict = { x : x**2 for x in range(10)}
-print(my_dict)
 
 
-# Exercise 9
-def days_of_month(month):
-    """Returns the day of a month"""    
-    month_lookup = {"Jan": 31, "Feb": 28, "Mar": 31, "Apr":30, "May":31, "Jun":30, "Jul":31,
-             "Aug": 31, "Sep": 30, "Oct": 31, "Nov":30, "Dec": 31}
-    print(month_lookup[month])
 
-days_of_month("Jan")
 
 
 

@@ -4,7 +4,6 @@ Created on Mon Jul  2 09:51:33 2018
 
 @author: Florian Ulrich Jehn
 """
-import math
 
 # Exercise 1
 def calc_base(vol, height):
@@ -18,6 +17,16 @@ print(calc_base(1000, 18))
 
 
 # Exercise 2
+def largest_of_three(a,b,c):
+    """
+    Tells you which was the largest of the three numbers it is provided with
+    """
+    print("The largest of a, b and c is " + str(max(a,b,c)))
+    
+largest_of_three(1,3,4)
+
+
+# Exercise 3
 def in_range(a,b,c):
     """Checks if a is between b and c"""
     return (a < b and a > c) or (a > b and a < c)
@@ -27,7 +36,20 @@ print(in_range(5, 10, 1))
 print(in_range(5, 10, 12))
 
 
-# Exercise 3
+# Exercise 4
+def reverse_string(word):
+    """Reverses the given string and returns it"""   
+    new_string = ""
+    index = len(word)
+    while index > 0:
+        index -= 1
+        new_string += word[index]
+    return new_string
+
+reverse_string("bla")
+
+
+# Exercise 5
 def b(z):
     prod = a(z, z)
     print(z, prod)
@@ -44,7 +66,7 @@ y = x + 1
 print(c(x, y+3, x+y))
 
 
-# Exercise 4
+# Exercise 6
 def adder():
     """Adds all the numbers the user gives until "done" is typed."""
     print("Type a number or 'done' when finished")
@@ -62,7 +84,7 @@ def adder():
 print("The result is: " + str(adder()))
 
 
-# Exercise 5
+# Exercise 7
 def collatz(number):
     """Creates the next number in a Collatz sequence"""
     if number % 2 == 0:
@@ -84,7 +106,7 @@ def prompt_and_run():
 prompt_and_run()
 
 
-# Exercise 6
+# Exercise 8
 n = int(input("Which element of the Fibonacci sequence do you want to calculate?\nPut in here (int): "))
 
 def fibonacci(n):
@@ -101,29 +123,6 @@ def fibonacci(n):
     print(last)
 
 fibonacci(n)
-
-
-# Exercise 7
-def largest_of_three(a,b,c):
-    """
-    Tells you which was the largest of the three numbers it is provided with
-    """
-    print("The largest of a, b and c is " + str(max(a,b,c)))
-    
-largest_of_three(1,3,4)
-
-
-# Exercise 8
-def reverse_string(word):
-    """Reverses the given string and returns it"""   
-    new_string = ""
-    index = len(word)
-    while index > 0:
-        index -= 1
-        new_string += word[index]
-    return new_string
-
-reverse_string("bla")
       
     
 # Exercise 9
