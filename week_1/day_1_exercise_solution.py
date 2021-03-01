@@ -19,7 +19,7 @@ print(bottom)
 
 # Exercise 2
 word = input("Give me a word! ")
-print(word[0])
+print(word)
 
 # Exercise 3
 celsius = 40
