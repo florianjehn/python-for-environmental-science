@@ -169,7 +169,7 @@ while True:
         if char in digits:
             digits_in = True
             
-    if not lower_in or not upper_in or not digits:
+    if not lower_in or not upper_in or not digits_in:
         print("Not a good password!")
         continue 
     
