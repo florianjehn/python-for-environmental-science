@@ -87,7 +87,7 @@ days_of_month("Jan")
 
 
 # Exercise 7
-my_dict = { x : x**2 for x in range(10)}
+my_dict = {x : x**2 for x in range(10)}
 print(my_dict)
 
 # Exercise 8
