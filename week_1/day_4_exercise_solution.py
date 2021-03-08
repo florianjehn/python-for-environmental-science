@@ -103,7 +103,7 @@ def display_inventory(inv):
 display_inventory(inv)
 
 
-# Exercise 7
+# Exercise 9
 def add_to_inventory(inventory, added_items):
     """Updates inventory by added_items."""
     for item in added_items:
