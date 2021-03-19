@@ -24,26 +24,8 @@ print(count_char("a", "banana"))
 def is_anagram(w1, w2):
     """
     Determines if w1 and w2 are anagrams
-    This is a rather complicated version, you could do this much easier.
-    For example you could compare to sorted lists of the characters in the word
     """
-
-    if len(w1) != len(w2):
-        return False
-    else:
-        w1_dict = create_word_dict(w1)
-        w2_dict = create_word_dict(w2)
-        return sorted(w1_dict.keys()) == sorted(w2_dict.keys()) and sorted(w1_dict.values()) == sorted(w2_dict.values()) 
-    
-def create_word_dict(word):
-    """Creates a dictionary from a word, with a count of every character"""
-    w_dict = {}
-    for char in word:
-        if char in w_dict.keys():
-            w_dict[char] += 1
-        else:
-            w_dict[char] = 1
-    return w_dict
+    return (sorted(first.upper()) == sorted(second.upper()))
 
 print(is_anagram("beer", "bree"))
 print(is_anagram("beer", "banana"))
