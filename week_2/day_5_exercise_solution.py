@@ -25,7 +25,7 @@ def is_anagram(w1, w2):
     """
     Determines if w1 and w2 are anagrams
     """
-    return (sorted(first.upper()) == sorted(second.upper()))
+    return (sorted(w1.upper()) == sorted(w2.upper()))
 
 print(is_anagram("beer", "bree"))
 print(is_anagram("beer", "banana"))
