@@ -116,7 +116,7 @@ import random
 number = 20
 guesses = 0
 
-random_number = random.randint(1, number+1)
+random_number = random.randint(1, number)
 
 while True:
     guesses += 1

@@ -6,6 +6,7 @@ Created on Mon Jul  2 09:51:33 2018
 """
 
 # Exercise 1
+import math
 def calc_base(vol, height):
     """
     Calculates the length of one side of the base of a rectangular pyramid,
@@ -129,7 +130,7 @@ fibonacci(n)
 import random
 def random_num():
     """Creates a random number between 10 and 100"""
-    return random.randint(10, 101)
+    return random.randint(10, 100)
 
 def check_num(num):
     """Checks if num is smaller than 20"""
