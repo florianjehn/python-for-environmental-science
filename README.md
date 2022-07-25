@@ -7,6 +7,6 @@ This is a reversed classroom course, which means that the students are meant to 
 
 If you want to contribute, I'd be happy to hear from you. The easiest way is to simply send me a pull request. If any questions arise, please contact [me](mailto:florianjehn@posteo.de).
 
-If you do not have a Python distribution on your computer already, I can recommend [WinPython](https://winpython.github.io/), but the course is also doable with other ones.
+If you do not have a Python distribution on your computer already, I can recommend [Anaconda](https://www.anaconda.com/), but the course is also possible with other ones if you prefer so.
 
 This course is based on Jupyter Notebooks; if you do not know how to use them, take a look [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook).
